@@ -1,6 +1,6 @@
 📌 Dictionary:
 
-Area = {0: 'Karapakam', 1: 'AnnaNagar', 2: 'Adyar', 3: 'Velachery', 4: 'Chrompet', 5: 'KKNagar', 6: 'TNagar'}
+Area = {0: 'Karapakkam', 1: 'AnnaNagar', 2: 'Adyar', 3: 'Velachery', 4: 'Chromepet', 5: 'KKNagar', 6: 'TNagar'}
 Parking = {1 : 'Yes'  , 0 : 'No'}
 Distance_from_main_road = {1 : 'Near' , 2 : 'Mid' , 3 : 'Far'}
 
