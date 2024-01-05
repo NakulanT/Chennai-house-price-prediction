@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Housing Price Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Housing Price Prediction in Chennai</h1>
+
+  <form action="/predict" method="post">
+    
+
+
+
+    <label for="drawing_room">Drawing Room:</label>
+    <input type="number" name="drawing_room" id="drawing_room">
+    
+
+    <label for="kitchen">Kitchen:</label>
+    <input type="number" name="kitchen" id="kitchen">
+
+    <label for="bath_room">Bath Room:</label>
+    <input type="number" name="bath_room" id="bath_room">
+
+    <label for="community_average">Community Average:</label>
+    <input type="number" name="community_average" id="community_average">
+
+    <label for="renovation_condition">Renovation Condition:</label>
+    <select name="renovation_condition" id="renovation_condition">
+      <option value="other">Other</option>
+    </select>
+
+    <label for="building_structure">Building Structure:</label>
+    <select name="building_structure" id="building_structure">
+      <option value="unknown">Unknown</option>
+    </select>
+
+    <label for="elevator">Elevator:</label>
+    <select name="elevator" id="elevator">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <input type="submit" value="Predict">
+  </form>
+
+  <p>Authors:</p>
+  <ul>
+    <li>Bibek Rawat</li>
+    <li>Shobham Sab</li>
+    <li>Shreyansh Raut</li>
+    <li>Ankita Sharma</li>
+    <li>Md. Tauhid Alam</li>
+  </ul>
+
+  <p>Copyright © 2021</p>
+  <p>All rights reserved</p>
+</body>
+</html>
