@@ -1,17 +1,30 @@
 import pandas as pd
-import joblib
+import pickle
+from sklearn.ensemble import GradientBoostingRegressor
 
-# Load the pre-trained model
-model = joblib.load('model.pkl')
+# Load the model
+with open('model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
 
-# Dictionary mappings for categorical features
-Area_mapping = {0: 'Karapakkam', 1: 'AnnaNagar', 2: 'Adyar', 3: 'Velachery', 4: 'Chromepet', 5: 'KKNagar', 6: 'TNagar'}
-Parking_mapping = {1: 'Yes', 0: 'No'}
-Distance_mapping = {1: 'Near', 2: 'Mid', 3: 'Far'}
+# Dictionaries for categorical features
+Area = {0: 'Karapakam', 1: 'AnnaNagar', 2: 'Adyar', 3: 'Velachery', 4: 'Chrompet', 5: 'KKNagar', 6: 'TNagar'}
+Parking = {1: 'Yes', 0: 'No'}
+Distance_from_main_road = {1: 'Near', 2: 'Mid', 3: 'Far'}
 
 # Function to get user input for features
 def get_user_input():
-    AREA = int(input(f"Enter Area (0-{len(Area_mapping) - 1}): "))
+    print("📌 Dictionary:\n", Area)
+
+    while True:
+        area_input = input(f"Enter Area ({', '.join(Area.values())}): ").strip().title()
+        if area_input in Area.values():
+            break
+        else:
+            print("Invalid Area. Please enter a valid value.")
+
+    AREA = next(key for key, value in Area.items() if value.lower() == area_input.lower())
+
+    # Remaining input as before
     INT_SQFT = int(input("Enter INT_SQFT: "))
     DIST_MAINROAD = int(input("Enter DIST_MAINROAD: "))
     N_BEDROOM = float(input("Enter N_BEDROOM: "))
@@ -32,6 +45,7 @@ def get_user_input():
 
     return user_data
 
+
 # Function to make predictions
 def predict_sales_price(user_data):
     prediction = model.predict(user_data)
@@ -41,10 +55,6 @@ def predict_sales_price(user_data):
 def main():
     # Get user input
     user_data = get_user_input()
-
-    # Map numerical values to categorical values
-    user_data['AREA'] = user_data['AREA'].map(Area_mapping)
-    user_data['PARK_FACIL'] = user_data['PARK_FACIL'].map(Parking_mapping)
 
     # Display the input data
     print("\nInput Data:")
