@@ -5,57 +5,53 @@
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+
   <h1>Housing Price Prediction in Chennai</h1>
 
-  <form method="post">
-    <div>
-      <label for="area">AREA:</label> 
-      <input type="text" name="area" id="area">
-    </div>
-
-    <div>
-      <label for="int_sqft">INT_SQFT:</label>
-      <input type="number" name="int_sqft" id="int_sqft">
-    </div>
-
-    <div>
-      <label for="dist_mainroad">DIST_MAINROAD:</label>
-      <input type="number" name="dist_mainroad" id="dist_mainroad">
-    </div>
-
-    <div>
-      <label for="n_bedroom">N_BEDROOM:</label>
-      <input type="number" name="n_bedroom" id="n_bedroom">
-    </div>
-
-    <div>
-      <label for="n_bathroom">N_BATHROOM:</label>
-      <input type="number" name="n_bathroom" id="n_bathroom">
-    </div>
-
-    <div>
-      <label for="n_room">N_ROOM:</label>
-      <input type="number" name="n_room" id="n_room">
-    </div>
-
-    <div>
-      <label for="park_facil">PARK_FACIL:</label>
-      <select name="park_facil" id="park_facil">
-        <option value=0>No</option>
-        <option value=1>Yes</option>
+  <div class="slider">
+    <!-- Content goes here if needed -->
+    <form method="post">
+      <label for="area">AREA:</label>
+      <select name="area" id="area">
+        <option value= 1>Adyar</option>
+        <option value=  2>Ana Nagar</option>
+        <option value= 3 >chrompt</option>
+        <option value= 4 >KK Nagar</option>
+        <option value=  5>Korampakam</option>
+        <option value=  6>R Nagar</option>
+        <option value= 7 >Velachery</option>
       </select>
-    </div>
-
-    <div class="button">
+  
+      <label for="int_sqft">Interior Square Feet:</label>
+      <input type="number" name="int_sqft" id="int_sqft">
+  
+      <label for="dist_mainroad"> Distance to Main Road :</label>
+      <input type="number" name="dist_mainroad" id="dist_mainroad">
+  
+      <label for="n_bedroom"> Distance to Main Road:</label>
+      <input type="number" name="n_bedroom" id="n_bedroom">
+  
+      <label for="n_bathroom"> Number of Bathrooms:</label>
+      <input type="number" name="n_bathroom" id="n_bathroom">
+  
+      <label for="n_room">Number of Rooms:</label>
+      <input type="number" name="n_room" id="n_room">
+  
+      <label for="park_facil">Parking Facility:</label>
+      <select name="park_facil" id="park_facil">
+        <option value= 0 >No</option>
+        <option value= 1 >Yes</option>
+      </select>
+  
       <input type="submit" value="Predict">
+    </form>
+  
+    <!-- Display result here -->
+    <div id="result">
+      {% if result is not none %}
+        Predicted Sales Price: {{ result }}
+      {% endif %}
     </div>
-  </form>
-
-  <!-- Display result here -->
-  <div class="container" id="result">
-    {% if result is not none %}
-      Predicted Sales Price: {{ result }}
-    {% endif %}
-  </div>
+</div>
 </body>
 </html>
