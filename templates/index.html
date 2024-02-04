@@ -7,9 +7,8 @@
 <body>
 
   <h1>Housing Price Prediction in Chennai</h1>
-
-  <div class="slider">
-    <!-- Content goes here if needed -->
+  
+  <div id="container">
     <form method="post">
       <label for="area">AREA:</label>
       <select name="area" id="area">
@@ -28,7 +27,7 @@
       <label for="dist_mainroad"> Distance to Main Road :</label>
       <input type="number" name="dist_mainroad" id="dist_mainroad">
   
-      <label for="n_bedroom"> Distance to Main Road:</label>
+      <label for="n_bedroom"> Number of Bedrooms:</label>
       <input type="number" name="n_bedroom" id="n_bedroom">
   
       <label for="n_bathroom"> Number of Bathrooms:</label>
@@ -42,16 +41,19 @@
         <option value= 0 >No</option>
         <option value= 1 >Yes</option>
       </select>
-  
-      <input type="submit" value="Predict">
-    </form>
-  
-    <!-- Display result here -->
-    <div id="result">
-      {% if result is not none %}
-        Predicted Sales Price: {{ result }}
-      {% endif %}
+
+      
+    <input type="submit" value="Predict">
     </div>
-</div>
+    </form>
+  </div>
+
+   
+  <div id="result">
+    {% if result is not none %}
+      Predicted Sales Price: {{ result }}
+    {% endif %}
+  </div>
+
 </body>
 </html>

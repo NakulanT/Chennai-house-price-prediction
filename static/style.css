@@ -3,92 +3,60 @@
   h1 {
     text-align:center;
     font-size: 30px;
-    background-color: #3985ef;
+    background-color: #f3f4f6;
     color: #0d0c0c;
-    font-size: 25px;
     border-radius: 20px;
     padding: 15px;
-    opacity: 0.8;
+    opacity: 0.7;
+    font-style:oblique ;
     
   }
   body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url("images/image9.jpg.jpeg");
+    background-image: url("images/exterior-1597098.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin: 20px;
     padding: 0;
-   
     align-items: center;
     justify-content: center;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     
+    
+    
 }
 
-.slider {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-image 0.5s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    animation: slide 30s infinite;
-}
-
-@keyframes slide {
-    0%, 100% {
-        background-image: url('images/Namma\ Chennai.jpeg');
-    }
-    25% {
-        background-image: url('images/CHENNAI\ #chanceaeilla\ #namma\ #chennai\ #madras\ #375\ #mageswaran\ #maghi.jpeg');
-    }
-    50% {
-        background-image: url('images/image11.jpg.jpg');
-    }
-    75% {
-        background-image: url('images/image10.jpg.jpeg');
-    }
-}
-  
   form {
     margin: 0 auto;
     width: 500px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:2fr 2fr;
     gap: 15px;
-    color: #090401;
-    
-    
-    
+    color: #0c0c0c;
+    font-size: 10px;    
 
   }
   
   label {
-    display: inline-block;
-    width: 150px;
-    font-size: 20px;
-    text-align: right;
-    padding-right: 10px;
-    
-    
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff; /* Set label text color */
+    font-size: 18px;
+    font-style: oblique;
   }
   
   input,
   select {
-    width: 300px;
-    border-radius: 4px;
-    padding: 5px;
-    margin-bottom: 10px;
-    color: rgb(19, 87, 233);
-    box-sizing: border-box;
-    
-    
-    
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff; 
+    color: #333; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 5px;
   }
   
   input[type="submit"] {
@@ -99,58 +67,33 @@
     cursor: pointer;
     
   }
-  
-  p {
-    text-align: center;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  li {
-    display: inline-block;
-    padding: 10px;
-  }
-  
-  a {
-    color: #3ae68b;
-  }
-  
-  a:hover {
-    color: #f9f7f6;
-  }
+
   input:hover{
-    color: rgb(240, 81, 8);
+    color: rgb(15, 3, 3);
   }
-  .container{
+
+  #result{
+    background-color: #d7e7f1;
+    padding: 10px; 
+    margin: 500px;
+    border: 1px solid #ccc; 
+    font-family: 'Arial', sans-serif; 
+    color: #000000; 
     text-align: center;
-    font-family: inherit; 
-    margin-top: 100px;
-    font-size:xx-large
-
-    
-  }
-  .button{
-    margin-top: 15px;
-
+    margin-top: 30px;
+    opacity: 0.8;
+    border-radius: 20px;
+    border: 1px solid #ccc;
   }
 
-.split {
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
 
-.left {
-  left: 0;
-  width: 50%;
-  background-color: #fffafa;
-}
+  
+
+
+
+
+
+ 
+
 
   
