@@ -3,10 +3,22 @@
 <head>
   <title>Housing Price Prediction</title>
   <link rel="stylesheet" href="static/style.css">
+  <style>
+    /* Hide the spinner arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+  </style>
 </head>
 <body>
 
-  <h1>Housing Price Prediction in Chennai</h1>
+  <h1>House Price Prediction in Chennai</h1>
   
   <div id="container">
     <form method="post">
@@ -22,19 +34,19 @@
       </select>
   
       <label for="int_sqft">Interior Square Feet:</label>
-      <input type="number" name="int_sqft" id="int_sqft">
+      <input type="number" name="int_sqft" id="int_sqft" placeholder="Feet">
   
       <label for="dist_mainroad"> Distance to Main Road :</label>
-      <input type="number" name="dist_mainroad" id="dist_mainroad">
+      <input type="number" name="dist_mainroad" id="dist_mainroad" placeholder="Meters">
   
       <label for="n_bedroom"> Number of Bedrooms:</label>
-      <input type="number" name="n_bedroom" id="n_bedroom">
+      <input type="number" name="n_bedroom" id="n_bedroom" placeholder="Count">
   
       <label for="n_bathroom"> Number of Bathrooms:</label>
-      <input type="number" name="n_bathroom" id="n_bathroom">
+      <input type="number" name="n_bathroom" id="n_bathroom" placeholder="Count">
   
       <label for="n_room">Number of Rooms:</label>
-      <input type="number" name="n_room" id="n_room">
+      <input type="number" name="n_room" id="n_room" placeholder="Count">
   
       <label for="park_facil">Parking Facility:</label>
       <select name="park_facil" id="park_facil">
@@ -51,7 +63,7 @@
    
   <div id="result">
     {% if result is not none %}
-      Predicted Sales Price: {{ result }}
+      Predicted Sales Price: {{ result }} ₹
     {% endif %}
   </div>
 

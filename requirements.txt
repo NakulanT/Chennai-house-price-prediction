@@ -1,2 +1,3 @@
 pandas==2.1.4
 Scikit-learn==1.3.2 
+Flask
